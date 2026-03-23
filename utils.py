@@ -1,11 +1,18 @@
 import nltk
 import string
 
-# ✅ Safe NLTK download (Streamlit fix)
+
+
+# ✅ FIX ALL NLTK ISSUES
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
     nltk.download('punkt')
+
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')
 
 try:
     nltk.data.find('corpora/stopwords')
